@@ -354,13 +354,13 @@ int main(int argc, char **argv)
 
         //opening sample File in "read mode" for comparison
         FILE *sentFile = fopen(sampleFile,"r");
-        if(sentFile == NULL)
-		  perror("Error opening UserProvidedFile for Comparing");
+	if(sentFile == NULL)
+		perror("Error opening UserProvidedFile for Comparing");
 
         //opening retransmittedFile.txt in "read mode" for comparison
         FILE* recvdbackFile = fopen("retransmittedFile.txt","r");
         if(recvdbackFile == NULL)
-		  perror("Error opening retransmittedFile.txt for comparison");
+		perror("Error opening retransmittedFile.txt for comparison");
 
         if(fileCompare(sentFile,recvdbackFile) == 0)
             printf("The files are same :)\n");
